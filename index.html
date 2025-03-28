@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac-A-Mole</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom left, rgb(90, 151, 78), rgb(123, 155, 115));
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 5vw;
+            margin-top: 10px;
+        }
+
+        .scoreboard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 400px;
+            margin: 10px auto;
+            font-size: 1.5rem;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            width: 90vw;
+            max-width: 320px;
+            aspect-ratio: 1;
+            margin: 20px auto;
+        }
+
+        .box {
+            width: 100%;
+            aspect-ratio: 1;
+            border: 2px solid rgb(129, 124, 124);
+            background-color: #fff;
+            transition: background 0.2s;
+        }
+
+        .move {
+            background-image: url('images.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 600px) {
+            .scoreboard {
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-size: 6vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WHAC-A-MOLE</h1>
+
+    <div class="scoreboard">
+        <div>
+            <h2>My Score: <span id="score">0</span></h2>
+        </div>
+        <div>
+            <h2>Time Left: <span id="timeleft">60</span></h2>
+        </div>
+    </div>
+
+    <div id="grid">
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+        <div class="box" id="9"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
